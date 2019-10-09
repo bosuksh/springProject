@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba755abe-ebed-47b5-a5ac-6c80151006f8" name="Default Changelist" comment="" />
+    <list default="true" id="ba755abe-ebed-47b5-a5ac-6c80151006f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/AdminUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/OrderGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/Partner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/repository/AdminUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/repository/OrderGroupRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/repository/PartnerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/OrderDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/OrderDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/repository/ItemRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/repository/OrderDetailRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/repository/UserRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/repository/ItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/repository/UserRepository.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -53,6 +74,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1RXfABVbxgd22vvDIeBB2Xcp5JW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="LombokPluginEnabledInProject" value="true" />
     <property name="LombokPluginIS_ANNOTATION_PROCESSING_CHECK_Enabled" value="true" />
@@ -229,11 +253,22 @@
       <workItem from="1570000390213" duration="14000" />
       <workItem from="1570014799506" duration="4421000" />
       <workItem from="1570156337359" duration="2035000" />
-      <workItem from="1570439611544" duration="2269000" />
+      <workItem from="1570439611544" duration="3891000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

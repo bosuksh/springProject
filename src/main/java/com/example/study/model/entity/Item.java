@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.criterion.Order;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -13,23 +14,34 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 public class Item {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String status;
+
     private String name;
 
-    private int price;
+    private String title;
 
     private String content;
 
-    // 1: N
-    // LAZY = 지연로딩, EAGER = 즉시로딩
+    private Integer price;
 
-    // LAZY = SELECT * FROM item where id = ?
+    private String brandName;
 
-    // EAGER = 1:1 연관관계 모든 것을 조인걸어서 성능저하를 일으킨다. 그러므로 1:1 관계이서 주로 사용
-    // item_id = order_detail.item_id
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "item")
-    private List<OrderDetail> orderDetailList;
+    private LocalDateTime registeredAt;
+
+    private LocalDateTime unregisteredAt;
+
+    private LocalDateTime createdAt;
+
+    private String createdBy;
+
+    private LocalDateTime updatedAt;
+
+    private String updatedBy;
+
+
 }
