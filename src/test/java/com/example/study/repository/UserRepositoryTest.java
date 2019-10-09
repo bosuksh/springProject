@@ -21,26 +21,35 @@ public class UserRepositoryTest extends StudyApplicationTests {
     @Test
     public void create(){
 
-        String account = "Test01";
-        String password = "Test01";
+        String account = "Test04";
+        String password = "Test04";
         String status = "REGISTERED";
-        String email = "Test01@gmail.com";
-        String phoneNumber = "010-1111-2222";
+        String email = "Test04@gmail.com";
+        String phoneNumber = "010-1111-4444";
         LocalDateTime registeredAt = LocalDateTime.now();
-        LocalDateTime createdAt = LocalDateTime.now();
-        String createdBy = "AdminServer";
+     //   LocalDateTime createdAt = LocalDateTime.now();
+       // String createdBy = "AdminServer";
 
-        User user = new User();
-        user.setAccount(account);
-        user.setPassword(password);
-        user.setStatus(status);
-        user.setEmail(email);
-        user.setPhoneNumber(phoneNumber);
-        user.setCreatedBy(createdBy);
-        user.setCreatedAt(createdAt);
-        user.setRegisteredAt(registeredAt);
+//        User user = new User();
+//        user.setAccount(account);
+//        user.setPassword(password);
+//        user.setStatus(status);
+//        user.setEmail(email);
+//        user.setPhoneNumber(phoneNumber);
+//       // user.setCreatedBy(createdBy);
+//       // user.setCreatedAt(createdAt);
+//        user.setRegisteredAt(registeredAt);
 
-        User newUser = userRepository.save(user);
+        User u = User.builder()
+                .account(account)
+                .email(email)
+                .status(status)
+                .password(password)
+                .phoneNumber(phoneNumber)
+                .registeredAt(registeredAt)
+                .build();
+
+        User newUser = userRepository.save(u);
         Assert.assertNotNull(newUser);
 
     }
