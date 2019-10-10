@@ -6,10 +6,12 @@ import com.example.study.model.network.Header;
 import com.example.study.model.network.request.UserApiRequest;
 import com.example.study.model.network.response.UserApiResponse;
 import com.example.study.repository.UserRepository;
+import org.hibernate.cfg.CreateKeySecondPass;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 public class UserApiLogicService implements CrudInterface<UserApiRequest, UserApiResponse> {
@@ -47,7 +49,16 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
 
     @Override
     public Header<UserApiResponse> read(Long id) {
-        return null;
+        // id-> repository getOne, getById
+
+        Optional<User> findUser = userRepository.findById(id);
+
+        // user-> userApiResponseReturn
+
+        return findUser.map(user->response(user))
+                .orElseGet(
+                        ()->Header.ERROR("No Data")
+                );
     }
 
     @Override
