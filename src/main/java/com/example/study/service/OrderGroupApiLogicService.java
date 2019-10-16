@@ -42,8 +42,8 @@ public class OrderGroupApiLogicService implements CrudInterface<OrderGroupApiReq
     @Override
     public Header<OrderGroupApiResponse> read(Long id) {
         return orderGroupRepository.findById(id)
-                .map(orderGroup -> response(orderGroup)).
-                        orElseGet(()->Header.ERROR("No Data"));
+                .map(this::response)
+                .orElseGet(()->Header.ERROR("No Data"));
     }
 
     @Override
@@ -51,19 +51,23 @@ public class OrderGroupApiLogicService implements CrudInterface<OrderGroupApiReq
         OrderGroupApiRequest body = request.getData();
         return orderGroupRepository.findById(body.getId())
                 .map(orderGroup -> {
-                    orderGroup.setRevName(body.getRevName())
-                    .setStatus(body.getStatus())
-                    .setUser(userRepository.getOne(body.getUserId()))
-                    .setStatus(body.getStatus())
-                    .setRevName(body.getRevName())
-                    .setArrivalDate(body.getArrivalDate())
-                    .setOrderAt(body.getOrderAt())
-                    .setTotalQuantity(body.getTotalQuantity())
-                    .setTotalPrice(body.getTotalPrice())
-                    .setPaymentType(body.getPaymentType());
+                    orderGroup
+                            .setRevName(body.getRevName())
+                            .setStatus(body.getStatus())
+                            .setUser(userRepository.getOne(body.getUserId()))
+                            .setStatus(body.getStatus())
+                            .setRevName(body.getRevName())
+                            .setArrivalDate(body.getArrivalDate())
+                            .setOrderAt(body.getOrderAt())
+                            .setTotalQuantity(body.getTotalQuantity())
+                            .setTotalPrice(body.getTotalPrice())
+                            .setPaymentType(body.getPaymentType());
 
-                    return response(orderGroup);
-                }).orElseGet(()->Header.ERROR("No Data"));
+                    return orderGroup;
+                })
+                .map(changeOrderGroup -> orderGroupRepository.save(changeOrderGroup))
+                .map(this::response)
+                .orElseGet(()->Header.ERROR("No Data"));
     }
 
     @Override
