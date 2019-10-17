@@ -12,16 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
+import java.util.Locale;
 
 @RestController
 @RequestMapping("/api/category")
-public class CategoryApiController extends CrudController<CategoryApiRequest, CategoryApiResponse> {
-
-    @Autowired
-    CategoryApiLogicService categoryApiLogicService;
-
-    @PostConstruct
-    public void init() {
-        this.baseService = categoryApiLogicService;
-    }
+public class CategoryApiController extends CrudController<CategoryApiRequest, CategoryApiResponse, Category> {
 }

@@ -2,6 +2,7 @@ package com.example.study.service;
 
 import com.example.study.ifs.CrudInterface;
 import com.example.study.model.entity.AdminUser;
+import com.example.study.model.entity.OrderGroup;
 import com.example.study.model.network.Header;
 import com.example.study.model.network.request.AdminUserApiRequest;
 import com.example.study.model.network.response.AdminUserApiResponse;
@@ -10,10 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AdminUserApiLogicService implements CrudInterface<AdminUserApiRequest, AdminUserApiResponse> {
+public class AdminUserApiLogicService extends BaseService<AdminUserApiRequest, AdminUserApiResponse, AdminUser> {
 
-    @Autowired
-    AdminUserRepository adminUserRepository;
 
     @Override
     public Header<AdminUserApiResponse> create(Header<AdminUserApiRequest> request) {
@@ -30,20 +29,20 @@ public class AdminUserApiLogicService implements CrudInterface<AdminUserApiReque
                 .passwordUpdatedAt(body.getPasswordUpdatedAt())
                 .build();
 
-        AdminUser newAdminUser = adminUserRepository.save(adminUser);
+        AdminUser newAdminUser = baseRepository.save(adminUser);
 
         return response(adminUser);
     }
 
     @Override
     public Header<AdminUserApiResponse> read(Long id) {
-        return adminUserRepository.findById(id).map(this::response).orElseGet(()->Header.ERROR("No Data"));
+        return baseRepository.findById(id).map(this::response).orElseGet(()->Header.ERROR("No Data"));
     }
 
     @Override
     public Header<AdminUserApiResponse> update(Header<AdminUserApiRequest> request) {
         AdminUserApiRequest body = request.getData();
-        return adminUserRepository.findById(body.getId()).map(adminUser -> {
+        return baseRepository.findById(body.getId()).map(adminUser -> {
             adminUser.setAccount(body.getAccount())
                     .setRole(body.getRole())
                     .setStatus(body.getStatus())
@@ -55,7 +54,7 @@ public class AdminUserApiLogicService implements CrudInterface<AdminUserApiReque
                     .setUnregisteredAt(body.getUnregisteredAt());
             return adminUser;
         })
-                .map(changeAdminUser -> adminUserRepository.save(changeAdminUser))
+                .map(changeAdminUser -> baseRepository.save(changeAdminUser))
                 .map(this::response)
                 .orElseGet(()->Header.ERROR("No Data"));
 
@@ -63,10 +62,10 @@ public class AdminUserApiLogicService implements CrudInterface<AdminUserApiReque
 
     @Override
     public Header delete(Long id) {
-        return adminUserRepository
+        return baseRepository
                 .findById(id)
                 .map(adminUser -> {
-                    adminUserRepository.delete(adminUser);
+                    baseRepository.delete(adminUser);
                     return Header.OK();
                 })
                 .orElseGet(()->Header.ERROR("No Data"));

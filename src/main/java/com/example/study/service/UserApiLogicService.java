@@ -15,11 +15,8 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
-public class UserApiLogicService implements CrudInterface<UserApiRequest, UserApiResponse> {
+public class UserApiLogicService extends BaseService<UserApiRequest, UserApiResponse,User> {
 
-
-    @Autowired
-    private UserRepository userRepository;
 
     // 1. request Data
     // 2. user 생성
@@ -36,12 +33,12 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
                 .account(userApiRequest.getAccount())
                 .email(userApiRequest.getEmail())
                 .status(UserStatus.REGISTERED)
-                .password(userApiRequest.getPhoneNumber())
+                .password(userApiRequest.getPassword())
                 .phoneNumber(userApiRequest.getPhoneNumber())
                 .registeredAt(LocalDateTime.now())
                 .build();
 
-        User newUser = userRepository.save(user);
+        User newUser = baseRepository.save(user);
 
 
         // 3. 생성된 데이터 -> userApiResponse Return
@@ -52,7 +49,7 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
     public Header<UserApiResponse> read(Long id) {
         // id-> repository getOne, getById
 
-        Optional<User> findUser = userRepository.findById(id);
+        Optional<User> findUser = baseRepository.findById(id);
 
         // user-> userApiResponseReturn
 
@@ -71,7 +68,7 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
 
         // 2. id->user 데이터를 찾고
 
-        Optional<User> optionalUser = userRepository.findById(userApiRequest.getId());
+        Optional<User> optionalUser = baseRepository.findById(userApiRequest.getId());
 
         return optionalUser.map(user -> {
 
@@ -86,7 +83,7 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
 
         })
                 // 3. update
-                .map(user->userRepository.save(user))
+                .map(user->baseRepository.save(user))
                 // 4. response
                 .map(user->response(user))
                 .orElseGet(()->Header.ERROR("No Data"));
@@ -98,11 +95,11 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
 
 
         // 1. id -> repository ->user
-        Optional<User> optionalUser = userRepository.findById(id);
+        Optional<User> optionalUser = baseRepository.findById(id);
 
         // 2. repository -> delete
         return optionalUser.map(user -> {
-            userRepository.delete(user);
+            baseRepository.delete(user);
             return Header.OK();
         })
                 // 3.response Data

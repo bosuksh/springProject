@@ -2,6 +2,7 @@ package com.example.study.controller.api;
 
 import com.example.study.controller.CrudController;
 import com.example.study.ifs.CrudInterface;
+import com.example.study.model.entity.AdminUser;
 import com.example.study.model.network.Header;
 import com.example.study.model.network.request.AdminUserApiRequest;
 import com.example.study.model.network.response.AdminUserApiResponse;
@@ -16,12 +17,6 @@ import javax.annotation.PostConstruct;
 @RestController
 @RequestMapping("/api/adminUser")
 
-public class AdminUserApiController extends CrudController<AdminUserApiRequest, AdminUserApiResponse> {
-    @Autowired
-    AdminUserApiLogicService adminUserApiLogicService;
+public class AdminUserApiController extends CrudController<AdminUserApiRequest, AdminUserApiResponse, AdminUser> {
 
-    @PostConstruct
-    public void init() {
-        this.baseService = adminUserApiLogicService;
-    }
 }
