@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba755abe-ebed-47b5-a5ac-6c80151006f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/AdminUserApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/service/AdminUserApiLogicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/controller/CrudController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/enumclass/ItemStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/enumclass/OrderType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/enumclass/UserStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,6 +14,46 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/api/ItemApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/api/ItemApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Item$ItemBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Item$ItemBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/OrderGroup$OrderGroupBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/OrderGroup$OrderGroupBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/OrderGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/OrderGroup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/ItemApiRequest$ItemApiRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/ItemApiRequest$ItemApiRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/ItemApiRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/ItemApiRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/OrderGroupApiRequest$OrderGroupApiRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/OrderGroupApiRequest$OrderGroupApiRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/OrderGroupApiRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/OrderGroupApiRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/UserApiRequest$UserApiRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/UserApiRequest$UserApiRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/UserApiRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/UserApiRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/ItemApiResponse$ItemApiResponseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/ItemApiResponse$ItemApiResponseBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/ItemApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/ItemApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/OrderGroupApiResponse$OrderGroupApiResponseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/OrderGroupApiResponse$OrderGroupApiResponseBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/OrderGroupApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/OrderGroupApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/UserApiResponse$UserApiResponseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/UserApiResponse$UserApiResponseBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/UserApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/UserApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/ItemApiLogicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/ItemApiLogicService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/OrderGroupApiLogicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/OrderGroupApiLogicService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/UserApiLogicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/UserApiLogicService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/AdminUserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/AdminUserApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/CategoryApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/CategoryApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/ItemApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/ItemApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/OrderDetailApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/OrderDetailApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/OrderGroupApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/OrderGroupApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/PartnerApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/PartnerApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/controller/api/UserApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/OrderGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/OrderGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/request/ItemApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/request/ItemApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/request/OrderGroupApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/request/OrderGroupApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/request/UserApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/request/UserApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/response/ItemApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/response/ItemApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/response/OrderGroupApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/response/OrderGroupApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/response/UserApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/model/network/response/UserApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/service/OrderGroupApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/service/OrderGroupApiLogicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/study/service/UserApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/study/service/UserApiLogicService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -260,7 +302,7 @@
       <workItem from="1570972010068" duration="498000" />
       <workItem from="1570972749722" duration="2581000" />
       <workItem from="1571034522464" duration="12628000" />
-      <workItem from="1571192812057" duration="12501000" />
+      <workItem from="1571192812057" duration="15055000" />
     </task>
     <servers />
   </component>
