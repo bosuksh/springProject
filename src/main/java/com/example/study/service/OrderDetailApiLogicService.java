@@ -11,7 +11,12 @@ import com.example.study.repository.OrderDetailRepository;
 import com.example.study.repository.OrderGroupRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -38,14 +43,14 @@ public class OrderDetailApiLogicService extends BaseService<OrderDetailApiReques
                         .build();
         OrderDetail newOrderDetail = baseRepository.save(orderDetail);
 
-        return response(newOrderDetail);
+        return Header.OK(response(newOrderDetail));
     }
 
     @Override
     public Header<OrderDetailApiResponse> read(Long id) {
         return baseRepository
                 .findById(id)
-                .map(orderDetail -> response(orderDetail))
+                .map(orderDetail -> Header.OK(response(orderDetail)))
                 .orElseGet(()->Header.ERROR("No Data"));
     }
 
@@ -64,7 +69,7 @@ public class OrderDetailApiLogicService extends BaseService<OrderDetailApiReques
                             .setOrderGroup(orderGroupRepository.getOne(body.getOrderGroupId()));
                     return orderDetail;
                 }).map(changeOrderDetail -> baseRepository.save(changeOrderDetail))
-                .map(this::response)
+                .map(orderDetail -> Header.OK(response(orderDetail)))
                 .orElseGet(()->Header.ERROR("No Data"));
 
 
@@ -81,7 +86,7 @@ public class OrderDetailApiLogicService extends BaseService<OrderDetailApiReques
                 .orElseGet(()->Header.ERROR("No Data"));
     }
 
-    private Header<OrderDetailApiResponse> response(OrderDetail orderDetail) {
+    private OrderDetailApiResponse response(OrderDetail orderDetail) {
         OrderDetailApiResponse orderDetailApiResponse =
                 OrderDetailApiResponse
                         .builder()
@@ -93,6 +98,16 @@ public class OrderDetailApiLogicService extends BaseService<OrderDetailApiReques
                         .orderGroupId(orderDetail.getOrderGroup().getId())
                         .itemId(orderDetail.getItem().getId())
                         .build();
-        return Header.OK(orderDetailApiResponse);
+        return orderDetailApiResponse;
+    }
+
+    @Override
+    public Header<List<OrderDetailApiResponse>> search(Pageable pageable) {
+        Page<OrderDetail> orderDetails = baseRepository.findAll(pageable);
+        List<OrderDetailApiResponse> orderDetailApiResponses = orderDetails.stream()
+                .map(orderDetail -> response(orderDetail))
+                .collect(Collectors.toList());
+
+        return Header.OK(orderDetailApiResponses);
     }
 }

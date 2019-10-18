@@ -10,7 +10,12 @@ import com.example.study.repository.OrderGroupRepository;
 import com.example.study.repository.UserRepository;
 import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class OrderGroupApiLogicService extends BaseService<OrderGroupApiRequest, OrderGroupApiResponse,OrderGroup> {
@@ -34,13 +39,13 @@ public class OrderGroupApiLogicService extends BaseService<OrderGroupApiRequest,
                 .build();
         OrderGroup newOrderGroup = baseRepository.save(orderGroup);
 
-        return response(newOrderGroup);
+        return Header.OK(response(newOrderGroup));
     }
 
     @Override
     public Header<OrderGroupApiResponse> read(Long id) {
         return baseRepository.findById(id)
-                .map(this::response)
+                .map(orderGroup -> Header.OK(response(orderGroup)))
                 .orElseGet(()->Header.ERROR("No Data"));
     }
 
@@ -65,7 +70,7 @@ public class OrderGroupApiLogicService extends BaseService<OrderGroupApiRequest,
                     return orderGroup;
                 })
                 .map(changeOrderGroup -> baseRepository.save(changeOrderGroup))
-                .map(this::response)
+                .map(orderGroup -> Header.OK(response(orderGroup)))
                 .orElseGet(()->Header.ERROR("No Data"));
     }
 
@@ -78,7 +83,7 @@ public class OrderGroupApiLogicService extends BaseService<OrderGroupApiRequest,
                 }).orElseGet(()->Header.ERROR("No Data"));
     }
 
-    private Header<OrderGroupApiResponse> response(OrderGroup orderGroup) {
+    private OrderGroupApiResponse response(OrderGroup orderGroup) {
         OrderGroupApiResponse orderGroupApiResponse = OrderGroupApiResponse.builder()
                 .id(orderGroup.getId())
                 .status(orderGroup.getStatus())
@@ -92,6 +97,16 @@ public class OrderGroupApiLogicService extends BaseService<OrderGroupApiRequest,
                 .arrivalDate(orderGroup.getArrivalDate())
                 .userId(orderGroup.getUser().getId())
                 .build();
-        return Header.OK(orderGroupApiResponse);
+        return orderGroupApiResponse;
+    }
+
+    @Override
+    public Header<List<OrderGroupApiResponse>> search(Pageable pageable) {
+        Page<OrderGroup> orderGroups = baseRepository.findAll(pageable);
+        List<OrderGroupApiResponse> orderGroupApiResponses = orderGroups.stream()
+                .map(orderGroup -> response(orderGroup))
+                .collect(Collectors.toList());
+
+        return Header.OK(orderGroupApiResponses);
     }
 }

@@ -8,7 +8,12 @@ import com.example.study.model.network.request.AdminUserApiRequest;
 import com.example.study.model.network.response.AdminUserApiResponse;
 import com.example.study.repository.AdminUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class AdminUserApiLogicService extends BaseService<AdminUserApiRequest, AdminUserApiResponse, AdminUser> {
@@ -31,12 +36,12 @@ public class AdminUserApiLogicService extends BaseService<AdminUserApiRequest, A
 
         AdminUser newAdminUser = baseRepository.save(adminUser);
 
-        return response(adminUser);
+        return Header.OK(response(adminUser));
     }
 
     @Override
     public Header<AdminUserApiResponse> read(Long id) {
-        return baseRepository.findById(id).map(this::response).orElseGet(()->Header.ERROR("No Data"));
+        return baseRepository.findById(id).map(user->Header.OK(response(user))).orElseGet(()->Header.ERROR("No Data"));
     }
 
     @Override
@@ -55,7 +60,7 @@ public class AdminUserApiLogicService extends BaseService<AdminUserApiRequest, A
             return adminUser;
         })
                 .map(changeAdminUser -> baseRepository.save(changeAdminUser))
-                .map(this::response)
+                .map(newUser->Header.OK(response(newUser)))
                 .orElseGet(()->Header.ERROR("No Data"));
 
     }
@@ -71,7 +76,7 @@ public class AdminUserApiLogicService extends BaseService<AdminUserApiRequest, A
                 .orElseGet(()->Header.ERROR("No Data"));
     }
 
-    private Header<AdminUserApiResponse> response(AdminUser adminUser) {
+    private AdminUserApiResponse response(AdminUser adminUser) {
         AdminUserApiResponse adminUserApiResponse =
                 AdminUserApiResponse.builder()
                         .id(adminUser.getId())
@@ -86,6 +91,15 @@ public class AdminUserApiLogicService extends BaseService<AdminUserApiRequest, A
                         .unregisteredAt(adminUser.getUnregisteredAt())
                         .build();
 
-        return Header.OK(adminUserApiResponse);
+        return adminUserApiResponse;
+    }
+
+    @Override
+    public Header<List<AdminUserApiResponse>> search(Pageable pageable) {
+        Page<AdminUser> adminUsers = baseRepository.findAll(pageable);
+        List<AdminUserApiResponse> adminUserApiResponseList = adminUsers.stream()
+                .map(adminUser -> response(adminUser))
+                .collect(Collectors.toList());
+        return Header.OK(adminUserApiResponseList);
     }
 }

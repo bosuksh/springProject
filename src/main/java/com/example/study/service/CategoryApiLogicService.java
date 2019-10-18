@@ -7,7 +7,12 @@ import com.example.study.model.network.request.CategoryApiRequest;
 import com.example.study.model.network.response.CategoryApiResponse;
 import com.example.study.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CategoryApiLogicService extends BaseService<CategoryApiRequest, CategoryApiResponse,Category> {
@@ -21,12 +26,12 @@ public class CategoryApiLogicService extends BaseService<CategoryApiRequest, Cat
                         .type(body.getType())
                         .build();
         Category newCategory = baseRepository.save(category);
-        return response(newCategory);
+        return Header.OK(response(newCategory));
     }
 
     @Override
     public Header<CategoryApiResponse> read(Long id) {
-        return baseRepository.findById(id).map(this::response).orElseGet(()->Header.ERROR("No Data"));
+        return baseRepository.findById(id).map(category -> Header.OK(response(category))).orElseGet(()->Header.ERROR("No Data"));
     }
 
     @Override
@@ -37,7 +42,7 @@ public class CategoryApiLogicService extends BaseService<CategoryApiRequest, Cat
                     .setType(body.getType());
             return category;
         }).map(changeCategory-> baseRepository.save(changeCategory))
-                .map(this::response)
+                .map(category -> Header.OK(response(category)))
                 .orElseGet(()->Header.ERROR("No Data"));
     }
 
@@ -49,7 +54,7 @@ public class CategoryApiLogicService extends BaseService<CategoryApiRequest, Cat
         }).orElseGet(()->Header.ERROR("No Data"));
     }
 
-    private Header<CategoryApiResponse> response(Category category) {
+    private CategoryApiResponse response(Category category) {
         CategoryApiResponse categoryApiResponse =
                 CategoryApiResponse.builder()
                         .id(category.getId())
@@ -57,6 +62,15 @@ public class CategoryApiLogicService extends BaseService<CategoryApiRequest, Cat
                         .title(category.getTitle())
                         .build();
 
-        return Header.OK(categoryApiResponse);
+        return categoryApiResponse;
+    }
+
+    @Override
+    public Header<List<CategoryApiResponse>> search(Pageable pageable) {
+        Page<Category> categories = baseRepository.findAll(pageable);
+        List<CategoryApiResponse> categoryApiResponseList = categories.stream()
+                .map(category -> response(category))
+                .collect(Collectors.toList());
+        return Header.OK(categoryApiResponseList);
     }
 }

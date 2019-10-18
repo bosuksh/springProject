@@ -9,10 +9,14 @@ import com.example.study.repository.ItemRepository;
 import com.example.study.repository.PartnerRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -38,14 +42,14 @@ public class ItemApiLogicService extends BaseService<ItemApiRequest,ItemApiRespo
 
         Item newItem = baseRepository.save(item);
         log.info("{}",newItem.getId());
-        return response(newItem);
+        return Header.OK(response(newItem));
     }
 
     @Override
     public Header<ItemApiResponse> read(Long id) {
         Optional<Item> optionalItem = baseRepository.findById(id);
 
-        return optionalItem.map(item -> response(item))
+        return optionalItem.map(item -> Header.OK(response(item)))
                 .orElseGet(()->Header.ERROR("No Data"));
 
     }
@@ -67,7 +71,7 @@ public class ItemApiLogicService extends BaseService<ItemApiRequest,ItemApiRespo
                     .setUnregisteredAt(itemApiRequest.getUnregisteredAt())
                     .setPartner(partnerRepository.getOne(itemApiRequest.getPartnerId()));
             Item newItem = baseRepository.save(item);
-            return response(newItem);
+            return Header.OK(response(newItem));
         }).orElseGet(()->Header.ERROR("No Data"));
     }
 
@@ -82,7 +86,7 @@ public class ItemApiLogicService extends BaseService<ItemApiRequest,ItemApiRespo
                 .orElseGet(()->Header.ERROR("No Data"));
     }
 
-    private Header<ItemApiResponse> response(Item item) {
+    private ItemApiResponse response(Item item) {
         ItemApiResponse body = ItemApiResponse.builder()
                 .id(item.getId())
                 .status(item.getStatus())
@@ -96,7 +100,15 @@ public class ItemApiLogicService extends BaseService<ItemApiRequest,ItemApiRespo
                 .price(item.getPrice())
                 .build();
 
-        return Header.OK(body);
+        return body;
     }
 
+    @Override
+    public Header<List<ItemApiResponse>> search(Pageable pageable) {
+        Page<Item> items = baseRepository.findAll(pageable);
+        List<ItemApiResponse> itemApiResponseList = items.stream()
+                .map(item -> response(item))
+                .collect(Collectors.toList());
+        return Header.OK(itemApiResponseList);
+    }
 }
