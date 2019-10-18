@@ -86,7 +86,7 @@ public class ItemApiLogicService extends BaseService<ItemApiRequest,ItemApiRespo
                 .orElseGet(()->Header.ERROR("No Data"));
     }
 
-    private ItemApiResponse response(Item item) {
+    public ItemApiResponse response(Item item) {
         ItemApiResponse body = ItemApiResponse.builder()
                 .id(item.getId())
                 .status(item.getStatus())

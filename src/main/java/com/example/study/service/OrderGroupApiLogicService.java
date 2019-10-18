@@ -83,7 +83,7 @@ public class OrderGroupApiLogicService extends BaseService<OrderGroupApiRequest,
                 }).orElseGet(()->Header.ERROR("No Data"));
     }
 
-    private OrderGroupApiResponse response(OrderGroup orderGroup) {
+    public OrderGroupApiResponse response(OrderGroup orderGroup) {
         OrderGroupApiResponse orderGroupApiResponse = OrderGroupApiResponse.builder()
                 .id(orderGroup.getId())
                 .status(orderGroup.getStatus())
