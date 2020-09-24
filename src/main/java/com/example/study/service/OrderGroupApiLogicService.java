@@ -4,8 +4,10 @@ import com.example.study.ifs.CrudInterface;
 import com.example.study.model.entity.OrderGroup;
 import com.example.study.model.entity.User;
 import com.example.study.model.network.Header;
+import com.example.study.model.network.Pagination;
 import com.example.study.model.network.request.OrderGroupApiRequest;
 import com.example.study.model.network.response.OrderGroupApiResponse;
+import com.example.study.model.network.response.UserApiResponse;
 import com.example.study.repository.OrderGroupRepository;
 import com.example.study.repository.UserRepository;
 import org.hibernate.criterion.Order;
@@ -106,7 +108,12 @@ public class OrderGroupApiLogicService extends BaseService<OrderGroupApiRequest,
         List<OrderGroupApiResponse> orderGroupApiResponses = orderGroups.stream()
                 .map(orderGroup -> response(orderGroup))
                 .collect(Collectors.toList());
-
-        return Header.OK(orderGroupApiResponses);
+        Pagination pagination = Pagination.builder()
+                .totalPages(orderGroups.getTotalPages())
+                .totalElements(orderGroups.getTotalElements())
+                .currentPage(orderGroups.getNumber())
+                .currentElements(orderGroups.getNumberOfElements())
+                .build();
+        return Header.OK(orderGroupApiResponses,pagination);
     }
 }

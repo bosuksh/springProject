@@ -12,7 +12,9 @@ public class AdminMenuService {
     public List<AdminMenu> getAdminMenu(){
 
         return Arrays.asList(
-                AdminMenu.builder().title("고객 관리").url("/pages/user").code("user").build()
+                AdminMenu.builder().title("고객 관리").url("/pages/user").code("user").build(),
+                AdminMenu.builder().title("주문 관리").url("/pages/order").code("order").build(),
+                AdminMenu.builder().title("상품 관리").url("/pages/item").code("item").build()
         );
 
     }
