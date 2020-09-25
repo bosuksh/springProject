@@ -3,6 +3,7 @@ package com.example.study.service;
 import com.example.study.ifs.CrudInterface;
 import com.example.study.model.entity.Item;
 import com.example.study.model.network.Header;
+import com.example.study.model.network.Pagination;
 import com.example.study.model.network.request.ItemApiRequest;
 import com.example.study.model.network.response.ItemApiResponse;
 import com.example.study.repository.ItemRepository;
@@ -109,6 +110,12 @@ public class ItemApiLogicService extends BaseService<ItemApiRequest,ItemApiRespo
         List<ItemApiResponse> itemApiResponseList = items.stream()
                 .map(item -> response(item))
                 .collect(Collectors.toList());
-        return Header.OK(itemApiResponseList);
+        Pagination pagination = Pagination.builder()
+                .totalPages(items.getTotalPages())
+                .totalElements(items.getTotalElements())
+                .currentPage(items.getNumber())
+                .currentElements(items.getNumberOfElements())
+                .build();
+        return Header.OK(itemApiResponseList, pagination);
     }
 }
