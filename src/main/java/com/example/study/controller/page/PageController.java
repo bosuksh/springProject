@@ -44,4 +44,11 @@ public class PageController {
                 .addObject("code", "item")
                 ;
     }
+    @RequestMapping("/partner")
+    public ModelAndView partner() {
+        return new ModelAndView("/pages/partner")
+                .addObject("menuList", adminMenuService.getAdminMenu())
+                .addObject("code", "partner")
+                ;
+    }
 }

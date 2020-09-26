@@ -3,6 +3,7 @@ package com.example.study.service;
 
 import com.example.study.model.entity.Partner;
 import com.example.study.model.network.Header;
+import com.example.study.model.network.Pagination;
 import com.example.study.model.network.request.PartnerApiRequest;
 import com.example.study.model.network.response.PartnerApiResponse;
 import com.example.study.repository.CategoryRepository;
@@ -104,6 +105,12 @@ public class PartnerApiLogicService extends BaseService<PartnerApiRequest, Partn
         List<PartnerApiResponse> partnerApiResponses = partners.stream()
                 .map(partner -> response(partner))
                 .collect(Collectors.toList());
-        return Header.OK(partnerApiResponses);
+        Pagination pagination = Pagination.builder()
+                .totalPages(partners.getTotalPages())
+                .totalElements(partners.getTotalElements())
+                .currentPage(partners.getNumber())
+                .currentElements(partners.getNumberOfElements())
+                .build();
+        return Header.OK(partnerApiResponses,pagination);
     }
 }
