@@ -28,13 +28,13 @@ HTTP API를 이용해서 주문, 사용자, 배송 관련 CRUD를 만들었고 T
 
 
 
-1. ##### git clone
+#### 1. git clone
 
 ```bash
 git clone https://github.com/bosuksh/springProject.git
 ```
 
- 2. ##### db연결: `resources` 디렉토리 밑에 있는 `application.yaml` 파일에 db정보를 추가
+##### 2. db연결: `resources` 디렉토리 밑에 있는 `application.yaml` 파일에 db정보를 추가
 
 ```yaml
 spring:
