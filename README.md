@@ -38,7 +38,7 @@ git clone https://github.com/bosuksh/springProject.git
 
 ```yaml
 spring:
-	datasource:
+  datasource:
     url: {db_url/db_name}
     username: {id}
     password: {password}
