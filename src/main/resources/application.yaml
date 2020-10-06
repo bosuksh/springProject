@@ -1,0 +1,7 @@
+#db source url
+spring:
+  jpa:
+    show-sql: true
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
