@@ -5,11 +5,13 @@ import com.example.study.model.entity.Partner;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import javax.servlet.http.Part;
 import java.time.LocalDateTime;
 
-public class PartnerRepositoryTest extends StudyApplicationTests {
+@DataJpaTest
+public class PartnerRepositoryTest  {
 
     @Autowired
     PartnerRepository partnerRepository;

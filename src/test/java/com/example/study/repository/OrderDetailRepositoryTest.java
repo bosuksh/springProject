@@ -5,11 +5,13 @@ import com.example.study.model.entity.OrderDetail;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class OrderDetailRepositoryTest extends StudyApplicationTests {
+@DataJpaTest
+public class OrderDetailRepositoryTest {
 
     @Autowired
     OrderDetailRepository orderDetailRepository;

@@ -5,151 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba755abe-ebed-47b5-a5ac-6c80151006f8" name="Default Changelist" comment="[add] view template&#10;&#10;파트너사 view,파트너사 controller와 페이징처리 추가">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/.classAnalysis.bin.icloud" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis 2.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis 3.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis 4.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis 5.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/study.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/study.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/study.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/study.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/study.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/StudyApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/component/LoginUserAuditorAware.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/config/JpaConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/CrudController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/GetController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/PostController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/api/AdminUserApiController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/api/CategoryApiController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/api/ItemApiController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/api/OrderDetailApiController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/api/OrderGroupApiController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/api/PartnerApiController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/api/UserApiController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/controller/page/PageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/ifs/CrudInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/SearchParam.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/AdminUser$AdminUserBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/AdminUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Category$CategoryBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Item$ItemBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/OrderDetail$OrderDetailBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/OrderDetail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/OrderGroup$OrderGroupBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/OrderGroup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Partner$PartnerBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/Partner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/User$UserBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/enumclass/ItemStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/enumclass/OrderType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/enumclass/UserStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/front/AdminMenu$AdminMenuBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/front/AdminMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/Header$HeaderBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/Header.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/Pagination$PaginationBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/Pagination.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/AdminUserApiRequest$AdminUserApiRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/AdminUserApiRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/CategoryApiRequest$CategoryApiRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/CategoryApiRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/ItemApiRequest$ItemApiRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/ItemApiRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/OrderDetailApiRequest$OrderDetailApiRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/OrderDetailApiRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/OrderGroupApiRequest$OrderGroupApiRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/OrderGroupApiRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/PartnerApiRequest$PartnerApiRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/PartnerApiRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/UserApiRequest$UserApiRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/request/UserApiRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/AdminUserApiResponse$AdminUserApiResponseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/AdminUserApiResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/CategoryApiResponse$CategoryApiResponseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/CategoryApiResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/ItemApiResponse$ItemApiResponseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/ItemApiResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/OrderDetailApiResponse$OrderDetailApiResponseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/OrderDetailApiResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/OrderGroupApiResponse$OrderGroupApiResponseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/OrderGroupApiResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/PartnerApiResponse$PartnerApiResponseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/PartnerApiResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/UserApiResponse$UserApiResponseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/UserApiResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/UserOrderInfoApiResponse$UserOrderInfoApiResponseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/model/network/response/UserOrderInfoApiResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/repository/AdminUserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/repository/CategoryRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/repository/ItemRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/repository/OrderDetailRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/repository/OrderGroupRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/repository/PartnerRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/AdminMenuService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/AdminUserApiLogicService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/BaseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/CategoryApiLogicService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/ItemApiLogicService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/OrderDetailApiLogicService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/OrderGroupApiLogicService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/PartnerApiLogicService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/study/service/UserApiLogicService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/StudyApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/repository/AdminUserRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/repository/CategoryRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/repository/ItemRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/repository/OrderDetailRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/repository/OrderGroupRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/repository/PartnerRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/repository/UserRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/sample/CategorySample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/sample/ItemSample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/sample/OrderDetailSample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/sample/PartnerSample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/study/sample/UserSample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/app/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/app/item.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/app/order.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/app/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/lib/css/AdminLTE.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/lib/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/lib/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/lib/css/ionicons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/lib/css/skin-blue.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/lib/img/user2-160x160.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/lib/js/adminlte.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/lib/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/lib/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/controlSidebar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/head.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/headerTitle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/sideMenu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/pages/item.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/pages/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/pages/order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/pages/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/repository/AdminUserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/repository/AdminUserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/repository/CategoryRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/repository/CategoryRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/repository/ItemRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/repository/ItemRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/repository/OrderDetailRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/repository/OrderDetailRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/repository/OrderGroupRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/repository/OrderGroupRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/repository/PartnerRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/repository/PartnerRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/repository/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/repository/UserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/sample/CategorySample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/sample/CategorySample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/sample/ItemSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/sample/ItemSample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/sample/OrderDetailSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/sample/OrderDetailSample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/sample/PartnerSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/sample/PartnerSample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/study/sample/UserSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/study/sample/UserSample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,8 +130,8 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -276,7 +152,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/example/study/model" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.springProject1 [build]">
+  <component name="RunManager" selected="Gradle.AdminUserRepositoryTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -288,18 +164,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ItemSample.createAll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AdminUserRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.example.study.sample.ItemSample.createAll&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.example.study.repository.AdminUserRepositoryTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":cleanTest" />
             <option value=":test" />
           </list>
         </option>
@@ -308,38 +183,17 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrderDetailSample.createOrder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AdminUserRepositoryTest.create" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.example.study.sample.OrderDetailSample.createOrder&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.example.study.repository.AdminUserRepositoryTest.create&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="PartnerSample.sampleCreate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.example.study.sample.PartnerSample.sampleCreate&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
             <option value=":test" />
           </list>
         </option>
@@ -387,6 +241,25 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="springProject1 [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="StudyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="study.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.study.StudyApplication" />
@@ -396,11 +269,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AdminUserRepositoryTest" />
+        <item itemvalue="Gradle.AdminUserRepositoryTest.create" />
+        <item itemvalue="Gradle.springProject1 [clean]" />
         <item itemvalue="Gradle.springProject1 [build]" />
         <item itemvalue="Gradle.UserSample.sampleCreate" />
-        <item itemvalue="Gradle.PartnerSample.sampleCreate" />
-        <item itemvalue="Gradle.OrderDetailSample.createOrder" />
-        <item itemvalue="Gradle.ItemSample.createAll" />
       </list>
     </recent_temporary>
   </component>
@@ -444,7 +317,7 @@
       <workItem from="1601129722272" duration="2049000" />
       <workItem from="1601394183456" duration="225000" />
       <workItem from="1601937025806" duration="309000" />
-      <workItem from="1601993276675" duration="1363000" />
+      <workItem from="1601993276675" duration="4188000" />
     </task>
     <task id="LOCAL-00001" summary="[add] view template&#10;&#10;파트너사 view,파트너사 controller와 페이징처리 추가">
       <created>1601130890301</created>
@@ -476,6 +349,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="[add] view template&#10;&#10;파트너사 view,파트너사 controller와 페이징처리 추가" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1888" y="133" key="#Project_Structure" timestamp="1601997666037">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1888" y="133" key="#Project_Structure/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601997666037" />
+    <state x="2138" y="313" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1601998029513">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2138" y="313" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601998029513" />
     <state x="560" y="217" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600957753403">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -484,45 +365,45 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="548" y="145" key="CommitChangelistDialog2/0.23.1920.1057@0.23.1920.1057" timestamp="1601130889653" />
-    <state width="1878" height="260" key="GridCell.Tab.0.bottom" timestamp="1601996392323">
+    <state width="1878" height="260" key="GridCell.Tab.0.bottom" timestamp="1601998212946">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="260" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601996392323" />
+    <state width="1878" height="260" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601998212946" />
     <state width="1878" height="260" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1601220652985" />
-    <state width="1878" height="260" key="GridCell.Tab.0.center" timestamp="1601996392323">
+    <state width="1878" height="260" key="GridCell.Tab.0.center" timestamp="1601998212945">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="260" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601996392323" />
+    <state width="1878" height="260" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601998212945" />
     <state width="1878" height="260" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1601220652984" />
-    <state width="1878" height="260" key="GridCell.Tab.0.left" timestamp="1601996392322">
+    <state width="1878" height="260" key="GridCell.Tab.0.left" timestamp="1601998212945">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="260" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601996392322" />
+    <state width="1878" height="260" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601998212945" />
     <state width="1878" height="260" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1601220652984" />
-    <state width="1878" height="260" key="GridCell.Tab.0.right" timestamp="1601996392323">
+    <state width="1878" height="260" key="GridCell.Tab.0.right" timestamp="1601998212946">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="260" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601996392323" />
+    <state width="1878" height="260" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601998212946" />
     <state width="1878" height="260" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1601220652985" />
-    <state width="1878" height="260" key="GridCell.Tab.1.bottom" timestamp="1601996392324">
+    <state width="1878" height="260" key="GridCell.Tab.1.bottom" timestamp="1601997161949">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="260" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601996392324" />
+    <state width="1878" height="260" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601997161949" />
     <state width="1878" height="260" key="GridCell.Tab.1.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1601220652986" />
-    <state width="1878" height="260" key="GridCell.Tab.1.center" timestamp="1601996392324">
+    <state width="1878" height="260" key="GridCell.Tab.1.center" timestamp="1601997161949">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="260" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601996392324" />
+    <state width="1878" height="260" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601997161949" />
     <state width="1878" height="260" key="GridCell.Tab.1.center/0.23.1920.1057@0.23.1920.1057" timestamp="1601220652986" />
-    <state width="1878" height="260" key="GridCell.Tab.1.left" timestamp="1601996392324">
+    <state width="1878" height="260" key="GridCell.Tab.1.left" timestamp="1601997161948">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="260" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601996392324" />
+    <state width="1878" height="260" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601997161948" />
     <state width="1878" height="260" key="GridCell.Tab.1.left/0.23.1920.1057@0.23.1920.1057" timestamp="1601220652985" />
-    <state width="1878" height="260" key="GridCell.Tab.1.right" timestamp="1601996392324">
+    <state width="1878" height="260" key="GridCell.Tab.1.right" timestamp="1601997161949">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="260" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601996392324" />
+    <state width="1878" height="260" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1601997161949" />
     <state width="1878" height="260" key="GridCell.Tab.1.right/0.23.1920.1057@0.23.1920.1057" timestamp="1601220652986" />
     <state width="221" height="457" key="HiddenNamespacesPopup" timestamp="1600957586461">
       <screen x="0" y="23" width="1920" height="1057" />

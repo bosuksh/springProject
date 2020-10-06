@@ -12,14 +12,15 @@ import com.example.study.repository.OrderGroupRepository;
 import com.example.study.repository.UserRepository;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
-public class OrderDetailSample extends StudyApplicationTests {
+@DataJpaTest
+public class OrderDetailSample  {
 
     private Random random = new Random();
 

@@ -10,13 +10,15 @@ import com.example.study.repository.ItemRepository;
 import com.example.study.repository.PartnerRepository;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Random;
 
-public class ItemSample extends StudyApplicationTests {
+@DataJpaTest
+public class ItemSample  {
 
     private Random random = new Random();
 

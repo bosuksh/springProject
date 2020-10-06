@@ -1,5 +1,9 @@
 #db source url
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/study?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+    username: root
+    password: root
   jpa:
     show-sql: true
   jackson:

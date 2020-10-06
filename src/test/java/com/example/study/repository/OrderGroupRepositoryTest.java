@@ -7,11 +7,12 @@ import com.example.study.model.enumclass.OrderType;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
-public class OrderGroupRepositoryTest extends StudyApplicationTests {
+@DataJpaTest
+public class OrderGroupRepositoryTest  {
 
     @Autowired
     OrderGroupRepository orderGroupRepository;

@@ -4,11 +4,16 @@ import com.example.study.StudyApplicationTests;
 import com.example.study.model.entity.AdminUser;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDateTime;
 
-public class AdminUserRepositoryTest extends StudyApplicationTests {
+@RunWith(SpringRunner.class)
+@DataJpaTest
+public class AdminUserRepositoryTest {
 
     @Autowired
     AdminUserRepository adminUserRepository;

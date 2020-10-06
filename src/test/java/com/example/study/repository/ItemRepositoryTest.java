@@ -6,12 +6,14 @@ import com.example.study.model.enumclass.ItemStatus;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
-public class ItemRepositoryTest extends StudyApplicationTests {
+@DataJpaTest
+public class ItemRepositoryTest {
     @Autowired
     private ItemRepository itemRepository;
 

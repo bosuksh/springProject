@@ -5,12 +5,14 @@ import com.example.study.model.entity.Category;
 import com.example.study.repository.CategoryRepository;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.TestPropertySource;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class CategorySample extends StudyApplicationTests {
+@DataJpaTest
+public class CategorySample{
 
     @Autowired
     private CategoryRepository categoryRepository;
