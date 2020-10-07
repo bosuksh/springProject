@@ -58,6 +58,12 @@ IntelliJ를 실행 후 프로젝트 import 후 Application 실행
 $ ./gradlew build && java -jar build/libs/study-0.1.0.jar
 ```
 
+#### 접속
+
+```
+http://localhost:8080/pages
+```
+
 
 
 # To-Do
